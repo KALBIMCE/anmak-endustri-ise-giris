@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Anmak Endüstri – İşe Giriş Evrak Yükleme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003E7D;
+        }
+
+        form {
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #aaa;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        small {
+            color: #555;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background: #003E7D;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0055aa;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Anmak Endüstri – İşe Giriş Evrak Yükleme</h1>
+
+<form action="/upload-documents" method="POST" enctype="multipart/form-data">
+    <label>Son 6 Ay Hizmet Dökümü (PDF) *</label>
+    <input type="file" name="hizmetDokumu" accept="application/pdf" required>
+
+    <label>İkametgah Belgesi (PDF) *</label>
+    <input type="file" name="ikametgah" accept="application/pdf" required>
+
+    <label>Askerlik Durum Belgesi (PDF) *</label>
+    <input type="file" name="askerlik" accept="application/pdf" required>
+
+    <label>Nüfus Kayıt Örneği (PDF) *</label>
+    <input type="file" name="nufusKayit" accept="application/pdf" required>
+
+    <label>MYK Belgesi (PDF) <small>(varsa)</small></label>
+    <input type="file" name="myk" accept="application/pdf">
+
+    <label>Sabıka Kaydı (PDF) *</label>
+    <input type="file" name="sabika" accept="application/pdf" required>
+
+    <label>Diploma (PDF) <small>(varsa)</small></label>
+    <input type="file" name="diploma" accept="application/pdf">
+
+    <button type="submit">Evrakları Yükle</button>
+</form>
+
+</body>
+</html>
